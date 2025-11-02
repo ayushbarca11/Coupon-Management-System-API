@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: coupon-management
+  datasource:
+    url: jdbc:mysql://localhost:3306/coupondb?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 20000
+      idle-timeout: 300000
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        jdbc:
+          batch_size: 20
+        order_inserts: true
+        order_updates: true
+        search:
+          enabled: true
+
+server:
+  port: 8080
+
+thirdparty:
+  usersapi:
+    url: https://dummyjson.com/users
+
+logging:
+  level:
+    root: INFO
+    com.example.usersapi: DEBUG
