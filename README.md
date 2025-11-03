@@ -4,7 +4,7 @@ A comprehensive RESTful API system for managing discount coupons in an e-commerc
  **Access API**:
    - **API Base URL**: http://localhost:8080/api/coupons
    - **Swagger UI**: http://localhost:8080/swagger-ui.html
-   - **API Docs**: http://localhost:8080/v3/api-docs
+ 
 
 ## API Endpoints
 
@@ -266,8 +266,7 @@ The system includes 7 pre-loaded sample coupons:
 ### Using Swagger UI
 
 1. Navigate to: http://localhost:8080/swagger-ui.html
-2. Interactive API documentation
-3. Test endpoints directly from browser
+
 
 ##  Assumptions & Limitations
 
